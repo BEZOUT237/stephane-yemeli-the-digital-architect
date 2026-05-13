@@ -4,6 +4,7 @@ import { Mail, ArrowUpRight, Sparkles } from "lucide-react";
 import { PageShell, SectionTitle } from "@/components/PageShell";
 import { useI18n } from "@/i18n/I18nProvider";
 import { socials, yemelinkLinks, EMAIL } from "@/components/socials";
+import contactTree from "@/assets/contact-tree.jpeg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
