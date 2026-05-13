@@ -39,10 +39,11 @@ function HomePage() {
             className="order-2 lg:order-1"
           >
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs font-medium text-muted-foreground">
-              <Sparkles className="size-3.5 text-primary" />
-              {t.home.greeting}
+              <span className="size-2 rounded-full bg-emerald-400 shadow-glow" />
+              Available for opportunities
             </span>
-            <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
+            <p className="mt-5 text-lg sm:text-xl text-muted-foreground font-medium">{t.home.greeting}</p>
+            <h1 className="mt-2 text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
               {t.home.iAm} <br />
               <span className="gradient-text">{t.home.name}</span>
             </h1>
@@ -118,23 +119,23 @@ function HomePage() {
                 />
               </div>
               <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -8, x: 8 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ delay: 0.6 }}
-                className="hidden sm:flex absolute -left-6 top-10 glass rounded-2xl px-4 py-3 shadow-elegant items-center gap-2 animate-float"
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant animate-float"
               >
-                <span className="size-2 rounded-full bg-primary shadow-glow" />
-                <span className="text-xs font-semibold">{t.home.badge1}</span>
+                <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">Building</p>
+                <p className="text-xs sm:text-sm font-bold gradient-text leading-tight">AI · SaaS · Future</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 8, x: -8 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="hidden sm:flex absolute -right-6 bottom-12 glass rounded-2xl px-4 py-3 shadow-elegant items-center gap-2 animate-float"
+                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant animate-float"
                 style={{ animationDelay: "1.5s" }}
               >
-                <span className="size-2 rounded-full bg-accent shadow-glow" />
-                <span className="text-xs font-semibold">{t.home.badge2}</span>
+                <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">YEMELINK</p>
+                <p className="text-xs sm:text-sm font-bold gradient-text leading-tight">Tech Hub</p>
               </motion.div>
             </ParallaxTilt>
           </motion.div>
