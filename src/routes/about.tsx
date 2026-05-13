@@ -4,7 +4,7 @@ import { Globe, Smartphone, Palette, PenLine, Megaphone, Sparkles, ArrowRight } 
 import { PageShell, SectionTitle } from "@/components/PageShell";
 import { useI18n } from "@/i18n/I18nProvider";
 import aboutThinking from "@/assets/about-thinking.png";
-import aboutCool from "@/assets/about-cool.jpeg";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,7 +24,17 @@ function AboutPage() {
   const { t } = useI18n();
   return (
     <PageShell>
-      <SectionTitle eyebrow="About" title={t.about.title} subtitle={t.common.tagline} />
+      <SectionTitle eyebrow="About" title={t.about.title} />
+
+      <motion.p
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="-mt-4 mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+      >
+        <span className="gradient-text">{t.common.tagline}</span>
+      </motion.p>
 
       {/* Story + first image */}
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -54,19 +64,6 @@ function AboutPage() {
         </motion.div>
       </div>
 
-      {/* Second image — full width feature */}
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="relative mt-16 sm:mt-24 mx-auto max-w-3xl"
-      >
-        <div className="absolute -inset-4 rounded-3xl gradient-primary opacity-25 blur-2xl" aria-hidden />
-        <div className="relative rounded-3xl overflow-hidden glass shadow-elegant lg:shadow-glow">
-          <img src={aboutCool} alt="Stéphane Yemeli" className="w-full h-auto object-cover aspect-[3/4] sm:aspect-[4/5]" loading="lazy" />
-        </div>
-      </motion.div>
 
       {/* Offers */}
       <div className="mt-20 sm:mt-28">
