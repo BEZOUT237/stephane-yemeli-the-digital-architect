@@ -25,6 +25,19 @@ function ContactPage() {
       <SectionTitle eyebrow="Contact" title={t.contact.title} subtitle={t.contact.subtitle} />
 
       <motion.div
+        initial={{ opacity: 0, scale: 0.96 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative mx-auto max-w-sm mb-12 sm:mb-16"
+      >
+        <div className="absolute -inset-4 rounded-3xl gradient-primary opacity-25 blur-2xl" aria-hidden />
+        <div className="relative rounded-3xl overflow-hidden glass shadow-elegant lg:shadow-glow">
+          <img src={contactTree} alt="Stéphane Yemeli" className="w-full h-auto object-cover aspect-[3/4]" loading="lazy" />
+        </div>
+      </motion.div>
+
+      <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
