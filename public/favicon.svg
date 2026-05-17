@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stéphane Yemeli favicon">
+  <defs>
+    <linearGradient id="g" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b5cf6" />
+      <stop offset="0.55" stop-color="#6366f1" />
+      <stop offset="1" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#141227" />
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="url(#g)" opacity="0.95" />
+  <path d="M20 20h8.5l4.8 7 4.8-7H46l-8.5 12.4L46 44h-8.5l-4.7-6.9-4.7 6.9H20l8.5-11.7z" fill="#f8fafc" />
+  <path d="M16 18.5c0-1.38 1.12-2.5 2.5-2.5h27a2.5 2.5 0 0 1 2.04 3.94l-12.3 17.8a2.5 2.5 0 0 0 0 2.84l1.54 2.22a2.5 2.5 0 0 1-2.05 3.92H18.5A2.5 2.5 0 0 1 16.45 42.8l12.3-17.8a2.5 2.5 0 0 0 0-2.84l-1.54-2.22A2.5 2.5 0 0 1 29.25 16h-10.75c-1.38 0-2.5 1.12-2.5 2.5z" fill="#f8fafc" opacity="0.14" />
+</svg>
