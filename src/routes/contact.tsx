@@ -55,7 +55,7 @@ function ContactPage() {
           </h2>
           <a
             href={`mailto:${EMAIL}`}
-            className="mt-7 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow hover:scale-[1.02] transition"
+            className="mt-7 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow transition motion-safe:hover:scale-[1.02]"
           >
             <Mail className="size-4" /> {t.common.sendEmail}
           </a>
@@ -71,7 +71,7 @@ function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="size-11 grid place-items-center rounded-xl glass text-muted-foreground hover:text-foreground hover:shadow-glow transition"
+                  className="size-11 grid place-items-center rounded-xl glass text-muted-foreground transition motion-safe:hover:text-foreground motion-safe:hover:shadow-glow"
                 >
                   <Icon className="size-5" />
                 </a>
@@ -104,11 +104,11 @@ function ContactPage() {
               href={l.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group glass rounded-xl p-4 hover:shadow-glow hover:-translate-y-0.5 transition"
+              className="group glass rounded-xl p-4 transition motion-safe:hover:shadow-glow motion-safe:hover:-translate-y-0.5"
             >
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-foreground">{l.name}</span>
-                <ArrowUpRight className="size-4 text-muted-foreground group-hover:text-primary transition" />
+                <ArrowUpRight className="size-4 text-muted-foreground transition motion-safe:group-hover:text-primary" />
               </div>
               <p className="mt-1 text-xs text-muted-foreground">{l.description}</p>
             </a>
