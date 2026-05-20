@@ -6,6 +6,7 @@ import { ParticleBackground } from "@/components/ParticleBackground";
 import { ParallaxTilt } from "@/components/ParallaxTilt";
 import { useI18n } from "@/i18n/I18nProvider";
 import { socials, EMAIL } from "@/components/socials";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,13 +22,14 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const { t } = useI18n();
+  const isMobile = useIsMobile();
 
   return (
     <main className="relative">
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-radial-glow pointer-events-none" aria-hidden />
-        <ParticleBackground />
+        {!isMobile && <ParticleBackground />}
         <div className="absolute -top-32 -left-20 size-[420px] rounded-full bg-primary/20 blur-3xl animate-blob" aria-hidden />
         <div className="absolute -bottom-40 -right-20 size-[420px] rounded-full bg-accent/20 blur-3xl animate-blob" aria-hidden />
 
@@ -57,13 +59,13 @@ function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow hover:scale-[1.02] transition"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow transition motion-safe:hover:scale-[1.02]"
               >
                 {t.common.explore} <ArrowRight className="size-4" />
               </Link>
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass font-semibold text-foreground hover:bg-secondary transition"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass font-semibold text-foreground transition motion-safe:hover:bg-secondary"
               >
                 <Mail className="size-4" /> {t.common.getInTouch}
               </a>
@@ -122,7 +124,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: -8, x: 8 }}
                 animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ delay: 0.6 }}
-                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant animate-float"
+                className="absolute -top-3 -right-3 sm:-top-4 sm:-right-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant sm:animate-float"
               >
                 <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">Building</p>
                 <p className="text-xs sm:text-sm font-bold gradient-text leading-tight">AI · SaaS · Future</p>
@@ -131,7 +133,7 @@ function HomePage() {
                 initial={{ opacity: 0, y: 8, x: -8 }}
                 animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant animate-float"
+                className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-6 glass rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-elegant sm:animate-float"
                 style={{ animationDelay: "1.5s" }}
               >
                 <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight">YEMELINK</p>
@@ -142,7 +144,7 @@ function HomePage() {
         </div>
 
         <div className="relative pb-10 flex justify-center">
-          <div className="text-xs text-muted-foreground animate-bounce">↓ scroll</div>
+          <div className="text-xs text-muted-foreground sm:animate-bounce">↓ scroll</div>
         </div>
       </section>
 
@@ -163,11 +165,11 @@ function HomePage() {
             >
               <Link
                 to={c.to}
-                className="group block glass rounded-2xl p-6 shadow-elegant hover:shadow-glow transition-all hover:-translate-y-1"
+                className="group block glass rounded-2xl p-6 shadow-elegant transition-all motion-safe:hover:shadow-glow motion-safe:hover:-translate-y-1"
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-bold gradient-text">{c.title}</h3>
-                  <ArrowRight className="size-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition" />
+                  <ArrowRight className="size-5 text-muted-foreground transition motion-safe:group-hover:text-primary motion-safe:group-hover:translate-x-1" />
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">{c.desc}</p>
               </Link>

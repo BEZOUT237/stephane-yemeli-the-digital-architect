@@ -35,11 +35,11 @@ function ProjectsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0, margin: "9999px" }}
             transition={{ duration: 0.5, delay: i * 0.06 }}
-            className="group glass rounded-2xl p-6 shadow-elegant hover:shadow-glow hover:-translate-y-1 transition"
+            className="group glass rounded-2xl p-6 shadow-elegant transition motion-safe:hover:shadow-glow motion-safe:hover:-translate-y-1"
           >
             <div className="flex items-start justify-between">
               <span className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold">{p.tag}</span>
-              <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary transition" />
+              <ArrowUpRight className="size-5 text-muted-foreground transition motion-safe:group-hover:text-primary" />
             </div>
             <h3 className="mt-4 text-xl font-bold text-foreground">{p.name}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
@@ -87,11 +87,11 @@ function ProjectsPage() {
                 href={l.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group glass rounded-xl p-4 hover:shadow-glow hover:-translate-y-0.5 transition"
+                className="group glass rounded-xl p-4 transition motion-safe:hover:shadow-glow motion-safe:hover:-translate-y-0.5"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-semibold text-foreground">{l.name}</span>
-                  <ArrowUpRight className="size-4 text-muted-foreground group-hover:text-primary transition" />
+                  <ArrowUpRight className="size-4 text-muted-foreground transition motion-safe:group-hover:text-primary" />
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">{l.description}</p>
               </a>
