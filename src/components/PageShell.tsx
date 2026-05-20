@@ -22,7 +22,7 @@ export function SectionTitle({ eyebrow, title, subtitle }: { eyebrow?: string; t
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0, margin: "9999px" }}
       transition={{ duration: 0.5 }}
       className="mb-10 sm:mb-14"
     >

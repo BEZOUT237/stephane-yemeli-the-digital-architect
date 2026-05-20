@@ -33,7 +33,7 @@ function VisionPage() {
               key={p.title}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0, margin: "9999px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="glass rounded-2xl p-6 shadow-elegant hover:shadow-glow transition relative overflow-hidden"
             >
@@ -53,7 +53,7 @@ function VisionPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="relative mt-16 sm:mt-24 mx-auto max-w-4xl"
       >

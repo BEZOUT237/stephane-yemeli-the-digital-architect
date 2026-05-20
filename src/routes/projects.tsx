@@ -33,7 +33,7 @@ function ProjectsPage() {
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0, margin: "9999px" }}
             transition={{ duration: 0.5, delay: i * 0.06 }}
             className="group glass rounded-2xl p-6 shadow-elegant hover:shadow-glow hover:-translate-y-1 transition"
           >
@@ -51,7 +51,7 @@ function ProjectsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="relative mt-16 sm:mt-24 mx-auto max-w-2xl"
       >
@@ -66,7 +66,7 @@ function ProjectsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="mt-16 sm:mt-24 relative"
       >
