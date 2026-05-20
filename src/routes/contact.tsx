@@ -27,7 +27,7 @@ function ContactPage() {
       <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="relative mx-auto max-w-sm mb-12 sm:mb-16"
       >
@@ -40,7 +40,7 @@ function ContactPage() {
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.5 }}
         className="relative glass rounded-3xl p-8 sm:p-12 shadow-elegant lg:shadow-glow overflow-hidden text-center"
       >
@@ -85,7 +85,7 @@ function ContactPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="mt-16 sm:mt-20"
       >

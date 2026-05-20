@@ -64,7 +64,7 @@ function SkillsPage() {
               key={cat}
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0, margin: "9999px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="glass rounded-2xl p-6 shadow-elegant hover:shadow-glow transition"
             >
@@ -79,7 +79,7 @@ function SkillsPage() {
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${level}%` }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, amount: 0, margin: "9999px" }}
                   transition={{ duration: 1, delay: 0.2 + i * 0.08 }}
                   className="h-full gradient-primary"
                 />
@@ -99,7 +99,7 @@ function SkillsPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0, margin: "9999px" }}
           transition={{ duration: 0.6 }}
           className="relative"
         >
@@ -111,7 +111,7 @@ function SkillsPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0, margin: "9999px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="relative"
         >

@@ -29,7 +29,7 @@ function AboutPage() {
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0, margin: "9999px" }}
         transition={{ duration: 0.6 }}
         className="-mt-4 mb-12 sm:mb-16 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
       >
@@ -41,7 +41,7 @@ function AboutPage() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0, margin: "9999px" }}
           transition={{ duration: 0.5 }}
           className="space-y-5 text-base sm:text-lg leading-relaxed text-muted-foreground"
         >
@@ -53,7 +53,7 @@ function AboutPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0, margin: "9999px" }}
           transition={{ duration: 0.6 }}
           className="relative mx-auto w-full max-w-sm"
         >
@@ -78,7 +78,7 @@ function AboutPage() {
                 key={o.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0, margin: "9999px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="glass rounded-2xl p-6 shadow-elegant hover:shadow-glow transition"
               >
