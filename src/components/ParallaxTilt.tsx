@@ -1,7 +1,9 @@
 import { useRef, type ReactNode } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function ParallaxTilt({ children, className = "" }: { children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   const onMove = (e: React.MouseEvent) => {
     const el = ref.current; if (!el) return;
@@ -11,6 +13,10 @@ export function ParallaxTilt({ children, className = "" }: { children: ReactNode
     el.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(0)`;
   };
   const onLeave = () => { if (ref.current) ref.current.style.transform = "perspective(900px) rotateY(0) rotateX(0)"; };
+
+  if (isMobile) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <div
