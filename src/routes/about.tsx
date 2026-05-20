@@ -80,7 +80,7 @@ function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "9999px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="glass rounded-2xl p-6 shadow-elegant hover:shadow-glow transition"
+                className="glass rounded-2xl p-6 shadow-elegant transition motion-safe:hover:shadow-glow"
               >
                 <div className="size-11 grid place-items-center rounded-xl gradient-primary text-primary-foreground shadow-glow">
                   <Icon className="size-5" />
@@ -93,7 +93,7 @@ function AboutPage() {
         </div>
 
         <div className="mt-10">
-          <Link to="/projects" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow hover:scale-[1.02] transition">
+          <Link to="/projects" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl gradient-primary text-primary-foreground font-semibold shadow-glow transition motion-safe:hover:scale-[1.02]">
             {t.common.learnMore} <ArrowRight className="size-4" />
           </Link>
         </div>
